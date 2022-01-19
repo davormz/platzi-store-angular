@@ -1,0 +1,9 @@
+<h3>{{product.title}}</h3>
+<img [src]="product.image" alt="Product image"/>
+<p>
+    <strong>{{product.price | currency }}</strong>
+</p>
+<p>
+    {{product.description | slice:0:35}}
+</p>
+<button (click)="addTocart()" >  Add to cart</button>
