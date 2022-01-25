@@ -7,3 +7,4 @@
     {{product.description | slice:0:35}}
 </p>
 <button (click)="addTocart()" >  Add to cart</button>
+<a [routerLink]="['/products', product.id]" >  View more</a>
