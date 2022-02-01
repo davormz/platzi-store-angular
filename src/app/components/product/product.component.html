@@ -1,10 +1,18 @@
-<h3>{{product.title}}</h3>
-<img [src]="product.image" alt="Product image"/>
-<p>
-    <strong>{{product.price | currency }}</strong>
-</p>
-<p>
-    {{product.description | slice:0:35}}
-</p>
-<button (click)="addTocart()" >  Add to cart</button>
-<a [routerLink]="['/products', product.id]" >  View more</a>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{product.title}}</mat-card-title>
+        <mat-card-subtitle>{{product.price | currency }}</mat-card-subtitle>
+    </mat-card-header>
+    <div class="crop-image">
+        <img mat-card-image [src]="product.image" alt="Product image" />
+    </div>
+    <mat-card-content>
+        <p>
+            {{product.description | slice:0:35}}
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="addTocart()">Add to cart</button>
+        <button mat-button [routerLink]="['/products', product.id]"> View more</button>
+    </mat-card-actions>
+</mat-card>

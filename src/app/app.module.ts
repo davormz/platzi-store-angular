@@ -13,6 +13,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { BannerItemComponent } from './components/banner-item/banner-item.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MaterialModule } from './material/material.module'
 
 @NgModule({
   declarations: [
@@ -30,7 +33,9 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
