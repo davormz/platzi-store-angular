@@ -11,8 +11,17 @@
             {{product.description | slice:0:35}}
         </p>
     </mat-card-content>
-    <mat-card-actions>
-        <button mat-raised-button color="primary" (click)="addTocart()">Add to cart</button>
-        <button mat-button [routerLink]="['/products', product.id]"> View more</button>
+    <mat-card-actions class="card-actions">
+        <button  mat-mini-fab disabled>
+            <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-button [routerLink]="['/products', product.id]">
+            <mat-icon>read_more</mat-icon>
+            View more
+        </button>
+        <button mat-raised-button color="primary" (click)="addTocart()">
+            <mat-icon>add_shopping_cart</mat-icon> 
+            Addd to cart
+        </button>
     </mat-card-actions>
 </mat-card>
