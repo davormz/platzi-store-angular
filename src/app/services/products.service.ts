@@ -1,67 +1,38 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Product } from './../models/product.model';
+import { environment } from './../../environments/environment'
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
-
-  private products : Product[] = [
-    {
-      id: '1',
-      image: 'assets/img/camiseta.png',
-      title: 'Camiseta',
-      price: 80000,
-      description: 'bla bla bla bla bla'
-    },
-    {
-      id: '2',
-      image: 'assets/img/hoodie.png',
-      title: 'Hoodie',
-      price: 80000,
-      description: 'bla bla bla bla bla'
-    },
-    {
-      id: '3',
-      image: 'assets/img/mug.png',
-      title: 'Mug',
-      price: 80000,
-      description: 'bla bla bla bla bla'
-    },
-    {
-      id: '4',
-      image: 'assets/img/pin.png',
-      title: 'Pin',
-      price: 80000,
-      description: 'bla bla bla bla bla'
-    },
-    {
-      id: '5',
-      image: 'assets/img/stickers1.png',
-      title: 'Stickers',
-      price: 80000,
-      description: 'bla bla bla bla bla'
-    },
-    {
-      id: '6',
-      image: 'assets/img/stickers2.png',
-      title: 'Stickers',
-      price: 80000,
-      description: 'bla bla bla bla bla'
-    }
-  ];
-
-  constructor() { }
+  private _apiUrl: string = environment.backendApiUrl + '/products';
+  
+  constructor(private http: HttpClient) { }
 
   getProductsForBanner(){
     
   }
 
   getProducts(){
-    return this.products;
+    // return this.products;
+    return this.http.get<Product[]>(this._apiUrl);
   }
 
   getProductById(productId: string){
-    return this.products.find(item => productId === item.id);
+    return this.http.get<Product>(`${this._apiUrl}/${productId}`);
+  }
+
+  createProduct(product: Product){
+    return this.http.post<Product>(this._apiUrl, product);
+  }
+
+  updateProduct(productId: string, changes: Partial<Product>){
+    return this.http.put<Product>(`${this._apiUrl}/${productId}`, changes);
+  }
+
+  deleteProduct(productId: string){
+    return this.http.delete<Product>(`${this._apiUrl}/${productId}`);
   }
 }
