@@ -5,39 +5,26 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductComponent } from './components/product/product.component';
-import { HomeComponent } from './components/home/home.component';
-import { ProductsComponent } from './components/products/products.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { MainBannerComponent } from './components/main-banner/main-banner.component';
-import { HeaderComponent } from './components/header/header.component';
-import { BannerItemComponent } from './components/banner-item/banner-item.component';
+
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from './material/material.module'
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent,
-    HomeComponent,
-    ProductsComponent,
-    FooterComponent,
-    MainBannerComponent,
-    HeaderComponent,
-    BannerItemComponent,
-    NotFoundComponent,
-    ProductDetailComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    CoreModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
