@@ -9,6 +9,7 @@ import { StorePageComponent } from './components/store-page/store-page.component
 import { StoreHeaderComponent } from './components/store-header/store-header.component';
 import { StoreFooterComponent } from './components/store-footer/store-footer.component';
 import { MaterialModule } from './../material/material.module';
+import { HomeModule } from './home/home.module';
 
 
 @NgModule({
@@ -21,9 +22,12 @@ import { MaterialModule } from './../material/material.module';
     StoreRoutingModule,
     SharedModule,
     ProductsModule,
-    MaterialModule
+    MaterialModule,
+    HomeModule
   ],
   exports: [
+    StoreHeaderComponent, 
+    StoreFooterComponent
   ]
 })
 export class StoreModule { }

@@ -10,6 +10,7 @@ import { MaterialModule } from './../../material/material.module';
 
 
 
+
 @NgModule({
   declarations: [
     ProductComponent,
@@ -17,9 +18,9 @@ import { MaterialModule } from './../../material/material.module';
     ProductDetailComponent
   ],
   imports: [
-    ProductsRoutingModule,
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    ProductsRoutingModule
   ]
 })
 export class ProductsModule { }

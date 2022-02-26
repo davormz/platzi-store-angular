@@ -12,8 +12,8 @@
         </p>
     </mat-card-content>
     <mat-card-actions class="card-actions">
-        <button  mat-mini-fab disabled>
-            <mat-icon>favorite</mat-icon>
+        <button  mat-icon-button color="warn" (click)="toggleFavorite()">
+            <mat-icon>{{favoriteIcon}}</mat-icon>
         </button>
         <button mat-button [routerLink]="['/store/products', product.id]">
             <mat-icon>read_more</mat-icon>
