@@ -1,0 +1,6 @@
+<button *ngIf="!active" mat-button (click)="toggle()">
+    <mat-icon>toggle_off</mat-icon>
+</button>
+<button *ngIf="active" mat-button color="accent" (click)="toggle()">
+    <mat-icon>toggle_on</mat-icon>
+</button>
