@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ShoppingCartService } from './../../../core/services/shopping-cart.service';
+import { map } from 'rxjs/operators'
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-store-header',
@@ -6,8 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./store-header.component.scss']
 })
 export class StoreHeaderComponent implements OnInit {
+  totalProducts$: Observable<number>;
 
-  constructor() { }
+  constructor(private shoppingCart: ShoppingCartService) {
+    this.totalProducts$ = this.shoppingCart.cart$.pipe(map(products => products.length))
+   }
 
   ngOnInit(): void {
   }
