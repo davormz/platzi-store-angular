@@ -10,12 +10,14 @@ import { StoreHeaderComponent } from './components/store-header/store-header.com
 import { StoreFooterComponent } from './components/store-footer/store-footer.component';
 import { MaterialModule } from './../material/material.module';
 import { HomeModule } from './home/home.module';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 
 
 @NgModule({
   declarations: [StorePageComponent, 
     StoreHeaderComponent, 
-    StoreFooterComponent
+    StoreFooterComponent, 
+    ShoppingCartComponent
   ],
   imports: [
     CommonModule,

@@ -15,9 +15,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-
-
-
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
   declarations: [],
@@ -36,7 +34,8 @@ import { MatListModule } from '@angular/material/list';
     MatPaginatorModule,
     MatSortModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatStepperModule
   ],
   exports: [
     MatBadgeModule,
@@ -52,7 +51,8 @@ import { MatListModule } from '@angular/material/list';
     MatPaginatorModule,
     MatSortModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatStepperModule
   ]
 })
 export class MaterialModule { }

@@ -13,7 +13,9 @@
                 <button mat-menu-item>Login</button>
                 <button mat-menu-item>Sign up</button>
               </mat-menu>
-            <a mat-raised-button [matBadge]="totalProducts$ | async" matBadgeColor="warn">
+            <a mat-raised-button [matBadge]="totalProducts$ | async" 
+                routerLink="/store/cart"
+                matBadgeColor="warn">
                 <mat-icon>shopping_cart</mat-icon>
                 Shopping cart
             </a>

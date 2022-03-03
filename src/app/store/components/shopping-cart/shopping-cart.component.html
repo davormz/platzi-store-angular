@@ -1,0 +1,19 @@
+<mat-horizontal-stepper>
+    <mat-step>
+        <ng-template matStepLabel>Products in cart</ng-template>
+        <ul>
+            <li *ngFor="let product of (products$ | async)">
+                {{ product.title }}
+            </li>
+        </ul>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Shipping information</ng-template>
+        
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Billing information</ng-template>
+        
+    </mat-step>
+</mat-horizontal-stepper>
+

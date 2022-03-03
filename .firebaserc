@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "platzi-store-angular-5c6e3": {
+      "hosting": {
+        "platzi-store-angular": [
+          "platzi-store-angular-5c6e3"
+        ]
+      }
+    }
+  }
+}
