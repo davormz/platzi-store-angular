@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { StoreRoutingModule } from './store-routing.module';
 
@@ -11,13 +12,14 @@ import { StoreFooterComponent } from './components/store-footer/store-footer.com
 import { MaterialModule } from './../material/material.module';
 import { HomeModule } from './home/home.module';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { StoreLoginComponent } from './components/store-login/store-login.component';
 
 
 @NgModule({
-  declarations: [StorePageComponent, 
-    StoreHeaderComponent, 
-    StoreFooterComponent, 
-    ShoppingCartComponent
+  declarations: [StorePageComponent,
+    StoreHeaderComponent,
+    StoreFooterComponent,
+    ShoppingCartComponent, StoreLoginComponent
   ],
   imports: [
     CommonModule,
@@ -25,10 +27,11 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
     SharedModule,
     ProductsModule,
     MaterialModule,
-    HomeModule
+    HomeModule,
+    ReactiveFormsModule
   ],
   exports: [
-    StoreHeaderComponent, 
+    StoreHeaderComponent,
     StoreFooterComponent
   ]
 })

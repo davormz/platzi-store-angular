@@ -10,6 +10,7 @@ import { AdminNavComponent } from './components/admin-nav/admin-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ProductsComponent } from './components/products/products.component';
 import { ToggleButtonComponent } from './components/toggle-button/toggle-button.component';
+import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 
 
 
@@ -17,7 +18,7 @@ import { ToggleButtonComponent } from './components/toggle-button/toggle-button.
   declarations: [ProductFormComponent, 
     AdminNavComponent, 
     ProductsComponent, 
-    ToggleButtonComponent
+    ToggleButtonComponent, AdminLoginComponent
   ],
   imports: [
     CommonModule,
