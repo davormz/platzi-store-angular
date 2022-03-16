@@ -10,9 +10,16 @@ import { Observable } from 'rxjs';
 })
 export class StoreHeaderComponent implements OnInit {
   totalProducts$: Observable<number>;
+  hideBadge: boolean = true;
 
   constructor(private shoppingCart: ShoppingCartService) {
-    this.totalProducts$ = this.shoppingCart.cart$.pipe(map(products => products.length))
+    this.totalProducts$ = this.shoppingCart.cart$.pipe(map(products => products.length));
+
+    this.totalProducts$.subscribe(length => {
+      if(length > 0 ){
+        this.hideBadge = false;
+      }
+    });
    }
 
   ngOnInit(): void {

@@ -12,16 +12,14 @@
         </p>
     </mat-card-content>
     <mat-card-actions class="card-actions">
-        <button  mat-icon-button color="warn" (click)="toggleFavorite()">
-            <mat-icon>{{favoriteIcon}}</mat-icon>
-        </button>
+        <app-fav-button></app-fav-button>
         <button mat-button [routerLink]="['/store/products', product.id]">
             <mat-icon>read_more</mat-icon>
             View more
         </button>
         <button mat-raised-button color="primary" (click)="addTocart()">
-            <mat-icon>add_shopping_cart</mat-icon> 
-            Ad to cart
+            <mat-icon>add_shopping_cart</mat-icon>
+            Add to cart
         </button>
     </mat-card-actions>
 </mat-card>

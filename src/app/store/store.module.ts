@@ -13,13 +13,14 @@ import { MaterialModule } from './../material/material.module';
 import { HomeModule } from './home/home.module';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { StoreLoginComponent } from './components/store-login/store-login.component';
+import { UserSignupComponent } from './components/user-signup/user-signup.component';
 
 
 @NgModule({
   declarations: [StorePageComponent,
     StoreHeaderComponent,
     StoreFooterComponent,
-    ShoppingCartComponent, StoreLoginComponent
+    ShoppingCartComponent, StoreLoginComponent, UserSignupComponent
   ],
   imports: [
     CommonModule,

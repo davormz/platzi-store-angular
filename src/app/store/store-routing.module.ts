@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { StorePageComponent } from './components/store-page/store-page.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { StoreLoginComponent } from './components/store-login/store-login.component';
+import { UserSignupComponent } from  './components/user-signup/user-signup.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,10 @@ const routes: Routes = [
       {
         path: 'login',
         component: StoreLoginComponent
+      },
+      {
+        path: 'signup',
+        component: UserSignupComponent
       },
       {
         path: 'products',

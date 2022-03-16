@@ -9,23 +9,24 @@ import { MaterialModule } from './../material/material.module';
 import { AdminNavComponent } from './components/admin-nav/admin-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ProductsComponent } from './components/products/products.component';
-import { ToggleButtonComponent } from './components/toggle-button/toggle-button.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
+import { SharedModule } from './../shared/shared.module';
 
 
 
 @NgModule({
-  declarations: [ProductFormComponent, 
-    AdminNavComponent, 
-    ProductsComponent, 
-    ToggleButtonComponent, AdminLoginComponent
+  declarations: [ProductFormComponent,
+    AdminNavComponent,
+    ProductsComponent,
+    AdminLoginComponent
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
     ReactiveFormsModule,
     MaterialModule,
-    LayoutModule
+    LayoutModule,
+    SharedModule
   ]
 })
 export class AdminModule { }

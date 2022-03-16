@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { ProductsService } from 'src/app/core/services/products.service';
+import { LoginService } from './../../../core/services/login.service';
 
 @Component({
   selector: 'app-store-login',
@@ -18,13 +18,14 @@ export class StoreLoginComponent implements OnInit {
   constructor(private fb: FormBuilder,
     private router: Router,
     private activeRoute: ActivatedRoute,
-    private productService: ProductsService) { }
+    private loginService: LoginService) { }
 
   ngOnInit(): void {
   }
 
   onSubmit() {
     // let
+    this.loginService.login(this.loginForm.value);
   }
 
 }

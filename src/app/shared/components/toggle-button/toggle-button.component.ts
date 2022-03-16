@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 const ICON_TOGGLE_OFF = 'toggle_off';
 const ICON_TOGGLE_ON = 'toggle_on';
@@ -8,6 +8,7 @@ const ICON_TOGGLE_ON = 'toggle_on';
   styleUrls: ['./toggle-button.component.scss']
 })
 export class ToggleButtonComponent implements OnInit {
+  @Input()
   active: boolean = false;
   toggleIcon: string = ICON_TOGGLE_OFF;
 

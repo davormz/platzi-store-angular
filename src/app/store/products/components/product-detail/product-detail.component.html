@@ -1,6 +1,6 @@
 <mat-card *ngIf="product">
     <mat-card-title>
-        {{product.title}} 
+        {{product.title}}
     </mat-card-title>
     <img mat-card-image [src]="product.image" alt="">
     <mat-card-subtitle>
@@ -10,12 +10,10 @@
         {{product.description}}
     </mat-card-content>
     <mat-card-actions class="card-actions">
-        <button  mat-icon-button color="warn" >
-            <mat-icon>favorite_border</mat-icon>
-        </button>
-        <button mat-raised-button color="primary">
-            <mat-icon>add_shopping_cart</mat-icon> 
-            Ad to cart
+        <app-fav-button></app-fav-button>
+        <button mat-raised-button color="primary" (click)="addTocart()">
+            <mat-icon>add_shopping_cart</mat-icon>
+            Add to cart
         </button>
     </mat-card-actions>
 </mat-card>

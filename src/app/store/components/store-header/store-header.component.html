@@ -11,9 +11,9 @@
             <button mat-button [matMenuTriggerFor]="loginMenu"><mat-icon>account_circle</mat-icon></button>
             <mat-menu #loginMenu="matMenu" yPosition="below">
                 <a mat-menu-item routerLink="/store/login">Login</a>
-                <a mat-menu-item>Sign up</a>
+                <a mat-menu-item routerLink="/store/signup">Sign up</a>
               </mat-menu>
-            <a mat-raised-button [matBadge]="totalProducts$ | async"
+            <a mat-raised-button [matBadgeHidden]="hideBadge" [matBadge]="totalProducts$ | async" [disabled]="hideBadge"
                 routerLink="/store/cart"
                 matBadgeColor="warn">
                 <mat-icon>shopping_cart</mat-icon>

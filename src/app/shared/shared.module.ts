@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { SharedRoutingModule } from './shared-routing.module';
+import { MaterialModule } from './../material/material.module'
+import { ToggleButtonComponent} from './components/toggle-button/toggle-button.component';
+import { FavButtonComponent } from './components/fav-button/fav-button.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [ToggleButtonComponent,
+    FavButtonComponent],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    MaterialModule
   ],
   exports: [
+    ToggleButtonComponent,
+    FavButtonComponent
   ]
 })
 export class SharedModule { }
