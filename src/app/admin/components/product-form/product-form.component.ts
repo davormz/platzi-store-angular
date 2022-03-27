@@ -28,11 +28,11 @@ export class ProductFormComponent implements OnInit {
       this.productService.getProductById(id)
       .subscribe(product => {
         this.productForm.patchValue({...product});
-      })
-    })
+      });
+    });
   }
 
   onSubmit() {
-    // let 
+    // let
   }
 }

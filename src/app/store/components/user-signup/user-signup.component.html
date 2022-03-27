@@ -1,1 +1,44 @@
-<p>user-signup works!</p>
+<form [formGroup]="signupForm">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Sign Up</mat-card-title>
+    </mat-card-header>
+  </mat-card>
+  <mat-card-content>
+    <div class="row">
+      <mat-form-field class="full-width" appearance="fill">
+        <input matInput placeholder="User name" formControlName="userName">
+        <mat-error *ngIf="signupForm.controls['userName'].hasError('required')">
+          User name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" placeholder="Password" formControlName="password">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="signupForm.controls['password'].hasError('required')">
+          Password is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Retype Password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" placeholder="Password" formControlName="rePassword">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="signupForm.controls['rePassword'].hasError('required')">
+          Password is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+
+  </mat-card-actions>
+</form>

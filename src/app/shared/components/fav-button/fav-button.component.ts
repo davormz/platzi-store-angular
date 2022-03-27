@@ -9,8 +9,8 @@ const FAV_ICON = 'favorite';
   styleUrls: ['./fav-button.component.scss']
 })
 export class FavButtonComponent implements OnInit {
-  isFavorite:boolean = false;
-  favoriteIcon:string = FAV_ICON_BORDER
+  isFavorite: boolean = false;
+  favoriteIcon: string = FAV_ICON_BORDER;
 
   constructor() { }
 

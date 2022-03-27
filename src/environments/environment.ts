@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  backendApiUrl: 'http://platzi-store.herokuapp.com'
+  backendApiUrl: 'https://fakestoreapi.com/'
 };
 
 /*

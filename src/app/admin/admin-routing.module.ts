@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AdminNavComponent } from './components/admin-nav/admin-nav.component'
+import { AdminNavComponent } from './components/admin-nav/admin-nav.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { ProductsComponent } from './components/products/products.component';
 
@@ -24,7 +24,7 @@ const routes: Routes = [
         component: ProductFormComponent
       }
     ]
-  }  
+  }
 ];
 
 @NgModule({
